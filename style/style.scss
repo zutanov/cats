@@ -1,0 +1,294 @@
+@import "_palette";
+@import "titles";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  background: $creamy;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 428px;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+.header {
+  background: $chocolate;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 14px 0;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__block {
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+    position: relative;
+    height: 24px;
+  }
+  &__title {
+    margin-left: 12px;
+  }
+  &__plus {
+    height: 24px;
+  }
+}
+
+.cat {
+  padding-top: 24px;
+  &__card {
+    padding: 12px 12px 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: $creamy;
+    border: 1px solid $chocolate;
+    box-shadow: 0px 4px 4px $lightAsphalt;
+    border-radius: 12px;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    &-block {
+      display: flex;
+      padding: 11px 0;
+    }
+    &-img {
+      height: 60px;
+    }
+    &-content {
+      margin-left: 24px;
+    }
+    &-title {
+      margin-bottom: 4px;
+    }
+    &-subtitle {
+      position: relative;
+      &::after {
+        content: url("../icons/arrow/Variant6.svg");
+        position: absolute;
+        bottom: -6px;
+      }
+      &_after {
+        &::after {
+          content: url("../icons/arrow/Variant7.svg");
+          position: absolute;
+          bottom: -6px;
+        }
+      }
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      &:hover {
+        .cat__card-editor {
+          visibility: visible;
+        }
+      }
+    }
+    &-editor {
+      visibility: hidden;
+    }
+  }
+}
+
+.header-view {
+  background: $chocolate;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px 0;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__block {
+    display: flex;
+    align-items: center;
+  }
+  &__back {
+    height: 24px;
+  }
+  &__logo {
+    height: 36px;
+    margin: 0 12px;
+  }
+  &__editor {
+    height: 24px;
+  }
+}
+
+.header-create {
+  background: $chocolate;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 14px 0;
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__back {
+    display: inline-block;
+    height: 24px;
+    margin-right: 12px;
+  }
+}
+
+.create {
+  padding-top: 24px;
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__input,
+  &__select {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px 0 16px;
+    border: 1px solid $chocolate;
+    background: $creamy;
+    border-radius: 8px;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: $deep;
+    opacity: 0.8;
+    outline: none;
+    &:focus,
+    &:active {
+      border: 2px solid $ocean;
+    }
+    &::placeholder {
+      color: $deep;
+    }
+  }
+  &__wrapper {
+    margin: 40px 0;
+    position: relative;
+    &::after {
+      content: url("../icons/drop_down.svg");
+      position: absolute;
+      top: 12px;
+      right: 14px;
+    }
+    &_date {
+      position: relative;
+      &::after {
+        content: url("../icons/calendar.svg");
+        position: absolute;
+        top: 15px;
+        right: 17px;
+      }
+    }
+  }
+  &__select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
+
+.history {
+  padding-top: 24px;
+  &__content {
+    width: 100%;
+    height: 48px;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: flex;
+    align-items: center;
+    background: $creamy;
+    border-bottom: 1px solid $chocolate;
+    position: relative;
+    &::after {
+      content: url("../icons/trash.svg");
+      position: absolute;
+      right: 12px;
+      height: 24px;
+    }
+  }
+  &__weight {
+    position: relative;
+    margin-left: 74px;
+    &::after {
+      content: url("../icons/arrow/Variant6.svg");
+      position: absolute;
+      bottom: -6px;
+    }
+  }
+}
+
+.view {
+  padding-top: 24px;
+  &__lists {
+    list-style-type: none;
+  }
+  &__list {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &__subtitle {
+    width: 79px;
+    margin-right: 16px;
+  }
+  &__value {
+    &-weight {
+      position: relative;
+      &::after {
+        content: url("../icons/arrow/Variant7.svg");
+        position: absolute;
+        bottom: -6px;
+      }
+    }
+  }
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 0;
+  padding: 20px 0 6px;
+  border-top: 1px solid $chocolate;
+  &__wrapper {
+    padding: 0 99px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__icons {
+    text-align: center;
+    &:hover {
+      .footer__desc {
+        color: $deep;
+      }
+      svg {
+        fill: $deep;
+      }
+    }
+    .footer__desc {
+      color: $lightAsphalt;
+    }
+    svg {
+      fill: $lightAsphalt;
+    }
+  }
+}
