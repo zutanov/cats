@@ -1,0 +1,64 @@
+.header {
+  background: $chocolate;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 14px 0;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__block {
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+    position: relative;
+    height: 24px;
+  }
+  &__title {
+    margin-left: 12px;
+  }
+  &__plus {
+    height: 24px;
+  }
+}
+
+.header-view {
+  background: $chocolate;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px 0;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__block {
+    display: flex;
+    align-items: center;
+  }
+  &__back {
+    height: 24px;
+  }
+  &__logo {
+    height: 36px;
+    margin: 0 12px;
+  }
+  &__editor {
+    height: 24px;
+  }
+}
+
+.header-create {
+  background: $chocolate;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 14px 0;
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__back {
+    display: inline-block;
+    height: 24px;
+    margin-right: 12px;
+  }
+}

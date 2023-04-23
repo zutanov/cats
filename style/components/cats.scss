@@ -1,0 +1,58 @@
+.cat {
+  padding-top: 24px;
+  &__card {
+    padding: 12px 12px 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: $creamy;
+    border: 1px solid $chocolate;
+    box-shadow: 0px 4px 4px $lightAsphalt;
+    border-radius: 12px;
+    &:not(:last-child) {
+      margin-bottom: 16px;
+    }
+    &-block {
+      display: flex;
+      padding: 11px 0;
+    }
+    &-img {
+      height: 60px;
+    }
+    &-content {
+      margin-left: 24px;
+    }
+    &-title {
+      margin-bottom: 4px;
+    }
+    &-subtitle {
+      position: relative;
+      &::after {
+        content: url("../icons/arrow/Variant6.svg");
+        position: absolute;
+        bottom: -6px;
+      }
+      &_after {
+        &::after {
+          content: url("../icons/arrow/Variant7.svg");
+          position: absolute;
+          bottom: -6px;
+        }
+      }
+    }
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      &:hover {
+        .cat__card-editor {
+          visibility: visible;
+        }
+      }
+    }
+    &-editor {
+      visibility: hidden;
+    }
+  }
+}

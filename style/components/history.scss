@@ -1,0 +1,29 @@
+.history {
+  padding-top: 24px;
+  &__content {
+    width: 100%;
+    height: 48px;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: flex;
+    align-items: center;
+    background: $creamy;
+    border-bottom: 1px solid $chocolate;
+    position: relative;
+    &::after {
+      content: url("../icons/trash.svg");
+      position: absolute;
+      right: 12px;
+      height: 24px;
+    }
+  }
+  &__weight {
+    position: relative;
+    margin-left: 74px;
+    &::after {
+      content: url("../icons/arrow/Variant6.svg");
+      position: absolute;
+      bottom: -6px;
+    }
+  }
+}

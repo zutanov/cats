@@ -6,14 +6,14 @@
   color: #332317;
 }
 
-.section__subtitle-20 {
+.section__subtitle-md {
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   color: #332317;
 }
 
-.section__subtitle-16 {
+.section__subtitle-sm {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -205,7 +205,8 @@ a {
   flex-direction: column;
 }
 
-.create__input, .create__select {
+.create__input,
+.create__select {
   width: 100%;
   height: 48px;
   padding: 0 14px 0 16px;
@@ -221,11 +222,15 @@ a {
   outline: none;
 }
 
-.create__input:focus, .create__input:active, .create__select:focus, .create__select:active {
+.create__input:focus,
+.create__input:active,
+.create__select:focus,
+.create__select:active {
   border: 2px solid #0c5497;
 }
 
-.create__input::placeholder, .create__select::placeholder {
+.create__input::placeholder,
+.create__select::placeholder {
   color: #332317;
 }
 
@@ -241,11 +246,11 @@ a {
   right: 14px;
 }
 
-.create__wrapper_date {
+.create__date {
   position: relative;
 }
 
-.create__wrapper_date::after {
+.create__date::after {
   content: url("../icons/calendar.svg");
   position: absolute;
   top: 15px;
